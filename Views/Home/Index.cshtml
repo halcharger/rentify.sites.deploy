@@ -1,31 +1,152 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+﻿<div id="hero-img" class="taller-img">
+    <img src="~/images/Themes/lavilla/hero-images/sea-big.jpg" alt="" />
+    <div id="hero-img-caption-wrapper">
+        <div id="hero-img-caption">
+            <div class="container">
+                <p class="caption-heading">Welcome to Lavilla.</p>
+                <p class="caption-sub-heading">Were you looking for a holiday house?<br />You've just found one.</p>
+            </div>
+        </div>
+    </div>
+</div><!-- end #hero-img -->
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <!-- intro -->
+
+    <div class="booking-area">
+        <div class="container">
+
+            <form action="~/booking" method="get" class="validate-form">
+
+                <div class="column-3">
+                    <p class="inner-container">
+                        <label for="check-in-date">Check-in date</label>
+                        <input id="check-in-date" type="text" name="check-in_date" class="input-datepicker" data-validation="required date future_date" data-validation-format="mm/dd/yyyy" />
+                    </p>
+                </div>
+                <div class="column-3">
+                    <p class="inner-container">
+                        <label for="check-out-date">Check-out date</label>
+                        <input id="check-out-date" type="text" name="check-out_date" class="input-datepicker" data-validation="required date future_date check_out_date" data-validation-format="mm/dd/yyyy" />
+                    </p>
+                </div>
+                <div class="column-2">
+                    <p>
+                        <label for="adults_number">Adults</label>
+                        <select id="adults_number" name="adults_number">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+                </div>
+                <div class="column-2">
+                    <p>
+                        <label for="children_number">Children</label>
+                        <select id="children_number" name="children_number">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+                </div>
+                <div class="column-2 column-last">
+                    <input type="submit" class="button-big aligncenter" value="Book now!" />
+                </div>
+
+            </form>
+
+        </div><!-- end .container -->
+    </div><!-- end .booking-area -->
+
+    <div class="container">
+
+        <div class="aligncenter">
+            <h2 class="underlined">A perfect place</h2>
+            <p class="sub-heading">Our house is right in front of the lake and is surrounded by nature.</p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="container">
+
+        <div class="column-4">
+            <img src="~/images/Themes/lavilla/views/forest.jpg" alt="" />
+            <h3 class="aligncenter">Forests</h3>
+            <p class="aligncenter">
+                Eiusmod temporibu incididunt ut elium ipsum dolor sit amet, consectetur adipisicing elit.
+                Magi aliqua ut enim ad erat lorem ipsum gentia elit.
+            </p>
+        </div>
+
+        <div class="column-4">
+            <img src="~/images/Themes/lavilla/views/river.jpg" alt="" />
+            <h3 class="aligncenter">Rivers</h3>
+            <p class="aligncenter">
+                Temporibu incididunt ut elium ipsum dolor sit amet, consectetur adipisicing elit,
+                incididunt ut elium agi aliqua ut enim ad erat lorem ipsum gentia.
+            </p>
+        </div>
+
+        <div class="column-4 column-last">
+            <img src="~/images/Themes/lavilla/views/mountains.jpg" alt="" />
+            <h3 class="aligncenter smaller">Mountains</h3>
+            <p class="aligncenter">
+                Eiusmod temporibu incididunt ut elium ipsum dolor sit amet, consectetur adipisicing elit.
+                Magi aliqua ut enim ad erat lorem ipsum gentia elit sed etiam.
+            </p>
+        </div>
+
+    </div><!-- end .container -->
+
+</div><!-- end .row (intro) -->
+
+<div class="row grey-row">
+    <!-- about the house -->
+
+    <div class="container">
+
+        <div class="col-half-width-left">
+
+            <div class="aligncenter">
+                <h2 class="underlined">The holiday house</h2>
+                <p class="sub-heading">Here are some interesting facts about our house.</p>
+            </div>
+
+            <h3>Awesome rooms</h3>
+            <p>
+                Lorem ipsum sit amet consectur adipiscing elit non sed etiam.
+                Do eiusmod temporibu incididunt ut elium ipsum dolor sit amet.
+            </p>
+
+            <div class="small-separation"></div>
+
+            <h3>Nice kitchen</h3>
+            <p>
+                Do eiusmod temporibu incididunt ut elium ipsum dolor sit amet.
+                Lorem ipsum sit amet consectur adipiscing elit non sed etiam.
+            </p>
+
+            <div class="small-separation"></div>
+
+            <h3>Gorgeous trees</h3>
+            <p>
+                Incididunt ut elium ipsum dolor sit amet.
+                Lorem ipsum sit amet consectur adipiscing elit non sed etiam.
+                Do eiusmod temporibu.
+            </p>
+
+            <div class="small-separation"></div>
+
+        </div><!-- end .col-half-width-left -->
+
+    </div><!-- end .container -->
+
+    <div class="full-col-half-width-right">
+        <img class="bg-img-content" src="~/images/Themes/lavilla/inner-images/house-right.jpg" alt="" />
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+</div><!-- end .row (about the house) -->
