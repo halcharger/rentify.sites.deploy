@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Rentify Lavilla - Home</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300italic,400italic,700italic" />
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+    @Styles.Render("~/css/theme/lavilla")
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 1320px)" href="~/css/themes/lavilla/responsive-grid.small-desktop.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 990px)" href="~/css/themes/lavilla/responsive-grid.tablet.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 660px)" href="~/css/themes/lavilla/responsive-grid.mobile.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 990px)" href="~/css/themes/lavilla/tablet.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 660px)" href="~/css/themes/lavilla/mobile.css" />
+
+</head>
+
+<body ng-app="rentifylavillaprototypeApp">
+
+    <img class="bg-img bg-img-fixed" src="~/images/Themes/lavilla/bg/bg.jpg" alt="" />
+
+    <div id="wrapper" class="wrapper-boxed">
+        <!-- or <div id="wrapper" class="wrapper-unboxed"> for an unboxed layout -->
+
+        <header>
+
+            <div class="top-header">
+                <div class="container">
+
+                    <div class="top-header-widgets">
+
+                        <div class="left-widget">
+
+                            <a href="#" class="contact-details-trigger">Contact details</a><span>&nbsp;&nbsp;<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></span>
+
+                            <div class="contact-content">
+                                <span>Email: <a href="contact.html">youremail@domain.com</a></span>
+                                <span>Phone: +871 9326 988</span>
+                                <span>Address: 32 Ocean Road, Beachville, Paradise</span>
+                            </div><!-- end .contact-content -->
+                        </div><!-- end .left-widget -->
+
+
+                    </div><!-- .top-header-widgets -->
+
+                </div><!-- end .container -->
+            </div><!-- end .top-header -->
+
+            <div class="header fixed-header">
+                <!-- or <div class="header"> for a scrolling header -->
+                <div class="container">
+
+                    <a href="/" id="logo"><h1><img src="~/images/Themes/lavilla/logo/logo-lavilla.png" alt="" /></h1></a>
+
+                    <div class="right-header">
+
+                        <nav class="responsive-menu">
+                            <a href="#" class="menubtn"><i class="fa fa-bars"></i>Menu</a>
+                            <ul class="sf-menu">
+                                <li class="nav-current"><a href="/">Home</a></li>
+                                <li><a href="/overview">Overview</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
+                                <li><a href="/rates">Rates</a></li>
+                                <li><a href="/availability">Availability</a></li>
+                                <li><a href="/reviews">Reviews</a></li>
+                                <li><a href="/contact">Contact Us & Directions</a></li>
+                            </ul>
+                        </nav>
+
+                    </div><!-- end .right-header -->
+
+                </div><!-- end .container -->
+            </div><!-- end .header -->
+
+        </header><!-- end header -->
+        @RenderBody()
+
+        <footer>
+            <div id="top-footer">
+                <div class="container">
+
+                    <div class="column-3">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms of usage</a></li>
+                            <li><a href="#">Press release</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </div><!-- end .column-3 -->
+
+                    <div class="column-3">
+                        <h4>Contact details</h4>
+                        <ul>
+                            <li>Lavilla</li>
+                            <li>32 Ocean Road</li>
+                            <li>Beachville, Paradise</li>
+                            <li>Phone: +871 9326 988</li>
+                            <li>Fax: +871 9326 989</li>
+                        </ul>
+                    </div><!-- end .column-3 -->
+
+                    <div class="column-3">
+                        <h4>Follow us</h4>
+                        <ul class="social-links-list">
+                            <li>
+                                <a href="#" class="social-link facebook-button">
+                                    <i class="fa fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-link googleplus-button">
+                                    <i class="fa fa-google-plus"></i>
+                                    <span>Google+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social-link twitter-button">
+                                    <i class="fa fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- end .column-3 -->
+
+                    <div class="column-3 column-last">
+                        <h4>About us</h4>
+                        <p>
+                            Consectetur adipiscing elit. Sed henis hodrerit alo nuncce lacus, eu faucibus purus tincit dunt quis.
+                            Vestibulum quis neque inter dum, elisitus scelerisque.
+                        </p>
+                    </div><!-- end .column-3 -->
+
+                </div><!-- end #container -->
+            </div><!-- end #top-footer -->
+
+            <div id="bottom-footer">
+                <div class="container">
+
+                    <div class="column-4">
+                        &copy; Lavilla 2014 - Designed by <a href="http://themeforest.net/user/AurelienD?ref=AurelienD">AurelienD</a>
+                    </div><!-- end .column-4 -->
+
+                    <div class="column-8 column-last">
+                        <ul>
+                            <li><a href="index-3.html">Home</a></li>
+                            <li><a href="room-list.html">Rooms</a></li>
+                            <li><a href="news-list.html">News</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="booking-2.html">Booking</a></li>
+                        </ul>
+                    </div><!-- end .column-8 -->
+
+                </div><!-- end .container -->
+            </div><!-- end #bottom-footer -->
+
+        </footer>
+
+    </div><!-- end #wrapper -->
+
+    <a id="go-to-top" href="#"><i class="fa fa-chevron-up"></i></a>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    @Scripts.Render("~/js/theme/lavilla")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

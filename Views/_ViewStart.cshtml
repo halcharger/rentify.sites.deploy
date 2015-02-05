@@ -1,3 +1,8 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    var themeLayoutFile = Session["ThemeLayoutFile"] as string ?? string.Empty;
+    var layoutFile = (string.IsNullOrEmpty(themeLayoutFile) || !File.Exists(HttpContext.Current.Server.MapPath(themeLayoutFile)))
+                //? "~/Views/Shared/_Layout.cshtml"
+                ? "~/Views/Shared/Themes/lavilla/_Layout.cshtml"
+                : themeLayoutFile;
+    Layout = layoutFile;
 }
