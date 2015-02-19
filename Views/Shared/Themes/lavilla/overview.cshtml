@@ -1,0 +1,54 @@
+﻿@using Rentify.Sites.Extensions
+@model Rentify.Sites.Models.OverviewViewModel
+<div id="main-content">
+    <div class="container">
+        <h1 class="aligncenter post-title">@Model.MainTitle</h1>
+        <h3 class="aligncenter post-title">@Model.SubTitle</h3>
+        <div class="row">
+            <p>@Html.Raw(Model.DescriptionHtml)</p>
+        </div>
+        <div class="row">
+            <h3>Rooms</h3>
+            <div class="inner-container">
+                @foreach (var item in Model.Rooms)
+                {
+                    <div class="column-8-3"><ul class="disc-bullet"><li>@item.Value @item.Description</li></ul></div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="inner-container">
+                @Html.Raw(Model.CustomRoomsHtml)
+            </div>
+        </div>
+        <div class="row">
+            <h3>Facts</h3>
+            <div class="inner-container">
+                @foreach (var item in Model.Facts)
+                {
+                    <div class="column-8-3"><ul><li><i class="fa @item.Value.FontAwesomeCheckIcon()"></i>  @item.Description</li></ul></div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="inner-container">
+                @Html.Raw(Model.CustomFactsHtml)
+            </div>
+        </div>
+        <div class="row">
+            <h3>Amenities</h3>
+            <div class="inner-container">
+                @foreach (var item in Model.Amenities)
+                {
+                    <div class="column-8-3"><ul><li><i class="fa @item.Value.FontAwesomeCheckIcon()"></i> @item.Description</li></ul>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="inner-container">
+                @Html.Raw(Model.CustomAmenitiesHtml)
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,5 @@
-﻿@{
-    var themeLayoutFile = Session["ThemeLayoutFile"] as string ?? string.Empty;
-    var layoutFile = (string.IsNullOrEmpty(themeLayoutFile) || !File.Exists(HttpContext.Current.Server.MapPath(themeLayoutFile)))
-                ? "~/Views/Shared/_Layout.cshtml"
-                : themeLayoutFile;
-    Layout = layoutFile;
+﻿@using Rentify.Sites.Infrastructure.Themes
+@{
+    var theme = Session["Theme"] as ITheme ?? new UnknownTheme();
+    Layout = theme.LayoutFile;
 }
