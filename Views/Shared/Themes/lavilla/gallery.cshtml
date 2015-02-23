@@ -1,0 +1,20 @@
+﻿@model Rentify.Sites.Models.GalleryViewModel
+<div id="main-content">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-slider">
+            <ul class="gallery-slider-main slider">
+                @foreach (var imgurl in Model.ImageUrls)
+                {
+                    <li><img src="@imgurl?w=800&h=450" alt="" /></li>
+                }
+            </ul>
+            <ul class="gallery-slider-thumbs slider">
+                @foreach (var imgurl in Model.ImageUrls)
+                {
+                    <li><a class="thumb" href="#"><img src="@imgurl?w=80&h=80&mode=crop" alt="" /></a></li>
+                }
+            </ul>
+        </div><!-- end .gallery-slider -->
+    </div>
+</div>
